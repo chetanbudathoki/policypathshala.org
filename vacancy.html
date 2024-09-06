@@ -1,6 +1,12 @@
 <!doctype html>
-<html lang="zxx">
-<?php include 'head.php';?>	
+<html lang="en">
+	<script>        
+        fetch('head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('head-include').innerHTML = data;
+            });
+    </script>
 
     <body>
 		<!-- Start Preloader Area -->
@@ -11,9 +17,13 @@
 		</div>
 		<!-- End Preloader Area -->
 		
-		<!-- Start Header Area -->
-		<?php include 'header.php';?>
-		<!-- End Header Area -->
+		<script>        
+			fetch('header.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('head-include').innerHTML = data;
+				});
+		</script>
 
 		<!-- Search Modal -->
 		<div class="modal fade search-modal-area" id="exampleModalsrc">
@@ -137,10 +147,14 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Admissions Area -->
-		<?php include 'footer.php';?>
-		<!-- Start Footer Area -->
-		
+	
+		<script>        
+			fetch('footer.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('head-include').innerHTML = data;
+				});
+		</script>
 		<!-- End Copy Right Area -->
 		
 		<!-- Start Go Top Area -->

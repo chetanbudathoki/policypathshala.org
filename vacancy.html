@@ -1,27 +1,23 @@
 <!doctype html>
 <html lang="en">
-	<script>        
-        fetch('head.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('head-include').innerHTML = data;
-            });
-    </script>
+	<head>
+		<div id="head-include"></div>
+		<script>        
+			fetch('head.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('head-include').innerHTML = data;
+				});
+		</script>
+	</head>
 
     <body>
-		<!-- Start Preloader Area -->
-		<div class="preloader">
-			<div class="lds-ripple">
-				<div class="pl-flip-1 pl-flip-2"></div>
-			</div>
-		</div>
-		<!-- End Preloader Area -->
-		
+		<div id="header-include"></div>
 		<script>        
 			fetch('header.html')
 				.then(response => response.text())
 				.then(data => {
-					document.getElementById('head-include').innerHTML = data;
+					document.getElementById('header-include').innerHTML = data;
 				});
 		</script>
 
@@ -148,11 +144,12 @@
 			</div>
 		</section>
 	
+		<div id="footer-include"></div>
 		<script>        
 			fetch('footer.html')
 				.then(response => response.text())
 				.then(data => {
-					document.getElementById('head-include').innerHTML = data;
+					document.getElementById('footer-include').innerHTML = data;
 				});
 		</script>
 		<!-- End Copy Right Area -->
